@@ -1,0 +1,241 @@
+
+
+.image-with-text {
+    display: flex !important;
+    align-items: flex-start !important;
+    gap: 20px !important;
+    margin: 20px 0 !important;
+}
+
+.image-with-text img {
+    width: 300px !important;
+    height: auto !important;
+    border-radius: 10px !important;
+}
+
+.image-with-text .text {
+    flex: 1 !important;
+}
+@import url('https://fonts.googleapis.com/css2?family=Bungee&family=Rubik+Mono+One&family=Seymour+One&display=swap');
+
+@font-face {
+    font-family: 'seymour';
+    src: url('static/fonts/SeymourOne-Regular.ttf') format('truetype');
+}
+
+.text1 {
+  font-family: "Seymour One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+.background-image{
+
+    background-image:url('background.avif');
+    background-repeat:no-repeat;
+    background-position:center center;
+    background-attachment:fixed;
+    background-size:cover;
+}
+
+body{
+    margin:0px;
+    padding:0px;
+    min-height:100vh;
+    padding-top:0px;
+    color:black; /* текст белым, чтобы было видно на фоне */  
+    
+}
+body{
+        font-family:'Tangerine',serif;
+        font-size:20px;
+    }
+
+h1{
+    font-size:40px;
+    font-style:oblique;
+    text-align:center; 
+    width:100%;        
+    margin:0px;          
+    padding:0px;    
+    position:auto; 
+    
+}
+.sozvezdia>img{
+    margin-top:100px;
+
+}
+
+.nachalo{
+    /* font-size:20px;
+    font-family:'Segoe UI', 'Tahoma', 'Geneva', 'Verdana', sans-serif;
+    line-height:1.5;
+    font-weight:lighter;
+    /* margin-block-start: 0; */
+    /* background: rgba(100, 100, 100, 0.7);полупрозрачный фон */
+    /* padding:100px;
+    margin:0px; */ 
+    display: flex;
+    gap: 30px;
+    align-items: flex-start;
+}
+/* .h2{
+margin-block-start: 0;
+margin-block-end: 0;
+} */
+
+
+/* content */
+.color{
+    color:pink;
+}
+
+/* мб внешняя родительская типа */
+
+
+
+.list-container{
+    border-style:solid;
+    display:inline-block;
+    border-width:1px;
+    padding:10px;
+    margin-left:100px;
+
+   
+}
+.list-container>p{
+    text-align:center;
+    font-weight:bold;
+    margin:1px;
+}
+.list-container>ol{
+     border-bottom-style:dashed; /*  */
+}
+.list-container>ol>li>a{
+    text-decoration:none;
+}
+.list-container>p>a{
+    text-decoration:none;
+}
+
+/* для top фото */
+img{
+    float:right;
+    border-style:dotted;
+    padding:1px;
+    margin-left:0.1px;
+    margin-top:10px;
+    width:500px;
+}
+
+
+
+/* верхняя статик панель */
+
+nav{
+    justify-content:space-between;
+}
+
+.nav-container{
+    justify-content:space-between;
+    position:fixed;
+    left:0px;
+    right:0px;
+    padding:0px;
+    display:flex;
+    background-color:rgb(145, 149, 185);
+    margin:5px;
+    
+}
+.nav-container>nav>ul{
+    display:flex;
+    list-style:none;
+    padding:0px;
+    margin:0px;
+    
+}
+
+.nav-container>h1>a{
+    text-decoration:none;
+}
+
+/* в виде кнопки с краями */
+.nav-container>nav>ul>li>a{
+ display:block;
+ padding:10px;
+ border-style:solid;
+ border-width:0.5px;  /*толщина линии кнопки */
+ color:blue;
+ text-decoration:none;
+ /* position: ; */
+}
+
+
+ @media(max-width:786px){
+.nav-container{
+    position:fixed;
+    width:97vw;
+
+	align-items:center;
+	padding:0 10px;
+	background-color:rgb(107, 110, 139);
+	border-radius:10px 10px;
+    }
+} 
+
+div>h2{
+
+    margin-bottom:10px;
+    margin-left:100px;
+}
+
+div>p{
+    margin-bottom:10px;
+    margin-left:100px;
+}
+
+
+/* ряд из картинок */
+
+.container{
+    display:inline-block;
+    text-align:center;
+   background-color:gray;
+   margin:20px;
+   margin-top:1px;
+}
+main{
+    text-align:center;
+    
+}
+.container>img{
+    width:300px;
+}
+
+
+/* таблица */
+table{
+    width:auto;
+    table-layout:fixed;
+    margin-left:25px;
+    margin-bottom:20px;
+    background-color:rgb(235, 200, 241);
+}
+table>caption{
+    font-size:40px;
+}
+table>tbody>tr{
+    font-weight:lighter;
+}
+
+video{
+    display:block;
+    margin-left:100px;
+}
+
+
+
+
+
+
