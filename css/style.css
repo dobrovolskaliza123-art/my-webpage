@@ -1,241 +1,368 @@
-
-
-.image-with-text {
-    display: flex !important;
-    align-items: flex-start !important;
-    gap: 20px !important;
-    margin: 20px 0 !important;
-}
-
-.image-with-text img {
-    width: 300px !important;
-    height: auto !important;
-    border-radius: 10px !important;
-}
-
-.image-with-text .text {
-    flex: 1 !important;
-}
 @import url('https://fonts.googleapis.com/css2?family=Bungee&family=Rubik+Mono+One&family=Seymour+One&display=swap');
 
 @font-face {
     font-family: 'seymour';
-    src: url('static/fonts/SeymourOne-Regular.ttf') format('truetype');
+    src: url('../static/fonts/SeymourOne-Regular.ttf') format('truetype');
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.background-image {
+    background-image: url('../images/background.avif');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    font-family: 'Tangerine', serif;
+    font-size: 20px;
+    color: black;
 }
 
 .text1 {
-  font-family: "Seymour One", sans-serif;
-  font-weight: 400;
-  font-style: normal;
+    font-family: "Seymour One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
 }
-
-
-.background-image{
-
-    background-image:url('background.avif');
-    background-repeat:no-repeat;
-    background-position:center center;
-    background-attachment:fixed;
-    background-size:cover;
-}
-
-body{
-    margin:0px;
-    padding:0px;
-    min-height:100vh;
-    padding-top:0px;
-    color:black; /* текст белым, чтобы было видно на фоне */  
-    
-}
-body{
-        font-family:'Tangerine',serif;
-        font-size:20px;
-    }
-
-h1{
-    font-size:40px;
-    font-style:oblique;
-    text-align:center; 
-    width:100%;        
-    margin:0px;          
-    padding:0px;    
-    position:auto; 
-    
-}
-.sozvezdia>img{
-    margin-top:100px;
-
-}
-
-.nachalo{
-    /* font-size:20px;
-    font-family:'Segoe UI', 'Tahoma', 'Geneva', 'Verdana', sans-serif;
-    line-height:1.5;
-    font-weight:lighter;
-    /* margin-block-start: 0; */
-    /* background: rgba(100, 100, 100, 0.7);полупрозрачный фон */
-    /* padding:100px;
-    margin:0px; */ 
-    display: flex;
-    gap: 30px;
-    align-items: flex-start;
-}
-/* .h2{
-margin-block-start: 0;
-margin-block-end: 0;
-} */
-
-
-/* content */
-.color{
-    color:pink;
-}
-
-/* мб внешняя родительская типа */
-
-
-
-.list-container{
-    border-style:solid;
-    display:inline-block;
-    border-width:1px;
-    padding:10px;
-    margin-left:100px;
-
-   
-}
-.list-container>p{
-    text-align:center;
-    font-weight:bold;
-    margin:1px;
-}
-.list-container>ol{
-     border-bottom-style:dashed; /*  */
-}
-.list-container>ol>li>a{
-    text-decoration:none;
-}
-.list-container>p>a{
-    text-decoration:none;
-}
-
-/* для top фото */
-img{
-    float:right;
-    border-style:dotted;
-    padding:1px;
-    margin-left:0.1px;
-    margin-top:10px;
-    width:500px;
-}
-
-
 
 /* верхняя статик панель */
 
-nav{
-    justify-content:space-between;
+.site-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
 }
 
-.nav-container{
-    justify-content:space-between;
-    position:fixed;
-    left:0px;
-    right:0px;
-    padding:0px;
-    display:flex;
-    background-color:rgb(145, 149, 185);
-    margin:5px;
-    
-}
-.nav-container>nav>ul{
-    display:flex;
-    list-style:none;
-    padding:0px;
-    margin:0px;
-    
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    padding: 0;
+    margin: 5px;
+    background-color: rgb(145, 149, 185);
 }
 
-.nav-container>h1>a{
-    text-decoration:none;
+.nav-container nav ul {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
-/* в виде кнопки с краями */
-.nav-container>nav>ul>li>a{
- display:block;
- padding:10px;
- border-style:solid;
- border-width:0.5px;  /*толщина линии кнопки */
- color:blue;
- text-decoration:none;
- /* position: ; */
+.nav-container h1 {
+    flex: 1;
+    width: auto;
+    margin: 0;
+    padding: 0;
+    font-size: 40px;
+    font-style: oblique;
+    text-align: center;
 }
 
-
- @media(max-width:786px){
-.nav-container{
-    position:fixed;
-    width:97vw;
-
-	align-items:center;
-	padding:0 10px;
-	background-color:rgb(107, 110, 139);
-	border-radius:10px 10px;
-    }
-} 
-
-div>h2{
-
-    margin-bottom:10px;
-    margin-left:100px;
+.nav-container h1 a {
+    text-decoration: none;
 }
 
-div>p{
-    margin-bottom:10px;
-    margin-left:100px;
+.nav-container nav a {
+    display: block;
+    padding: 10px;
+    border-style: solid;
+    border-width: 0.5px;
+    color: blue;
+    text-decoration: none;
 }
 
+.nav-container input {
+    margin: 0 10px;
+}
+
+/* общий контент */
+
+main {
+    display: block;
+    max-width: 1100px;
+    margin: 90px auto 0;
+    padding: 0 20px;
+}
+
+.nachalo,
+.content-card,
+.main {
+    display: block;
+    margin-bottom: 30px;
+    padding: 25px;
+    background: rgba(255, 255, 255, 0.75);
+    line-height: 1.5;
+}
+
+.nachalo h2,
+.content-card h2,
+.main h2 {
+    margin: 0 0 10px;
+    text-align: left;
+}
+
+.nachalo p,
+.content-card p {
+    margin: 0 0 15px;
+    text-align: left;
+}
+
+blockquote {
+    margin: 20px 0;
+    padding: 15px;
+    border-left: 4px solid rgb(145, 149, 185);
+    background: rgba(255, 255, 255, 0.5);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    border-style: dotted;
+    padding: 1px;
+}
+
+.image-with-text {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    margin: 20px 0;
+}
+
+.image-with-text img {
+    width: 300px;
+    height: auto;
+    border-radius: 10px;
+}
+
+.image-with-text .text {
+    flex: 1;
+    margin: 0;
+    text-align: left;
+}
+
+/* Flexbox-компоновка блока с содержанием */
+
+.layout-section {
+    display: flex;
+    align-items: flex-start;
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+.layout-section .content-card {
+    flex: 1;
+    margin-bottom: 0;
+}
+
+.list-container {
+    width: 260px;
+    border-style: solid;
+    border-width: 1px;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.75);
+}
+
+.list-container > p {
+    text-align: center;
+    font-weight: bold;
+    margin: 1px;
+}
+
+.list-container ol {
+    margin-top: 10px;
+    padding-left: 25px;
+}
+
+.list-container a {
+    text-decoration: none;
+}
 
 /* ряд из картинок */
 
-.container{
-    display:inline-block;
-    text-align:center;
-   background-color:gray;
-   margin:20px;
-   margin-top:1px;
-}
-main{
-    text-align:center;
-    
-}
-.container>img{
-    width:300px;
+.outher {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
 }
 
+.container {
+    width: 300px;
+    text-align: center;
+    background-color: gray;
+    padding-bottom: 10px;
+}
+
+.container img {
+    width: 300px;
+}
+
+.container p {
+    margin: 5px 0;
+}
 
 /* таблица */
-table{
-    width:auto;
-    table-layout:fixed;
-    margin-left:25px;
-    margin-bottom:20px;
-    background-color:rgb(235, 200, 241);
-}
-table>caption{
-    font-size:40px;
-}
-table>tbody>tr{
-    font-weight:lighter;
+
+table {
+    width: 100%;
+    table-layout: fixed;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    background-color: rgb(235, 200, 241);
 }
 
-video{
-    display:block;
-    margin-left:100px;
+caption {
+    font-size: 40px;
+    margin-bottom: 10px;
 }
 
+th,
+td {
+    border: 1px solid black;
+    padding: 10px;
+    vertical-align: top;
+}
 
+tbody tr {
+    font-weight: lighter;
+}
 
+/* видео */
 
+.video-wrapper {
+    max-width: 720px;
+    margin: 0 auto;
+}
 
+.video-wrapper iframe {
+    display: block;
+    width: 100%;
+    height: 405px;
+    border: none;
+}
 
+/* footer из page.html */
+
+.page-footer {
+    max-width: 1100px;
+    margin: 30px auto 0;
+    padding: 20px;
+    text-align: center;
+    background-color: rgb(145, 149, 185);
+}
+
+.page-footer p {
+    margin: 5px 0;
+}
+
+@media (max-width: 786px) {
+    .site-header {
+        position: static;
+    }
+
+    main {
+        margin-top: 20px;
+        padding: 0 10px;
+    }
+
+    .nav-container {
+        width: auto;
+        align-items: center;
+        flex-wrap: wrap;
+        padding: 0 10px;
+        background-color: rgb(107, 110, 139);
+        border-radius: 10px 10px;
+    }
+
+    .nav-container h1 {
+        order: -1;
+        flex-basis: 100%;
+        font-size: 28px;
+    }
+
+    .nav-container nav ul {
+        flex-wrap: wrap;
+    }
+
+    .layout-section {
+        display: block;
+    }
+
+    .list-container {
+        width: auto;
+        margin-top: 20px;
+    }
+
+    .image-with-text {
+        display: block;
+    }
+
+    .image-with-text img {
+        width: 100%;
+        margin-bottom: 15px;
+    }
+
+    caption {
+        font-size: 28px;
+    }
+}
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropbtn {
+    background-color: rgb(145, 149, 185);
+    color: blue;
+    padding: 10px;
+    font-size: 20px;
+    font-family: 'Tangerine', serif;
+    border: 0.5px solid black;
+    cursor: pointer;
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: rgba(255, 255, 255, 0.95);
+    min-width: 240px;
+    border: 1px solid #ccc;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    z-index: 1000;
+    display: none;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.dropdown-menu a {
+    display: block;
+    padding: 8px 12px;
+    color: blue;
+    text-decoration: none;
+    border-bottom: 0.5px solid #eee;
+    font-size: 18px;
+}
+
+.dropdown-menu a:hover {
+    background-color: #e0e0e0;
+    text-decoration: underline;
+}
